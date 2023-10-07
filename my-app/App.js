@@ -1,22 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+import RessaurantItem from './src/components/RestaurantItem';
+import restaurants from './assets/data/restaurants.json'
+
+
+
 export default function App() {
   return (
     <View style={styles.container}>
       {/*retaurant data*/}
-      <View style={styles.restaurantContainer}>
-        <Image 
-          source={{uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg'
-          }} 
-          style = {styles.image}
-        />
-        <Text style = {styles.title}>El Cabo Coffe Bar Tres De Mayo</Text>
-        <Text style = {styles.name}>$ $1.99 15-30 minutes</Text>
+      <RessaurantItem restaurant={restaurants[0]}/>
+      <RessaurantItem restaurant={restaurants[1]}/>  
 
 
-
-      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -28,18 +25,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  restaurantContainer: {
-    width: '100%',
-    
-  },
-  image: {
-    width: '100%',
-    aspectRatio:5/3
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginTop: 10,
   },
 });
