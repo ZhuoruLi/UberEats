@@ -4,6 +4,9 @@ import { StyleSheet, View } from 'react-native';
 
 import HomeScreen from './src/screens/HomeScreen';
 import RestaurantDetailsPage from './src/screens/RestaurantDetailsScreen';
+import DishDetailsScreen from './src/screens/DishDetailsScreen';
+import Basket from './src/screens/Basket';
+import OrderScreen from './src/screens/OrdersScreen';
 
 export default function App() {
   return (
@@ -12,9 +15,11 @@ export default function App() {
       {/* <RessaurantItem restaurant={restaurants[0]}/>
       <RessaurantItem restaurant={restaurants[1]}/>  */}
 
-      <RestaurantDetailsPage/>
+      {/* <RestaurantDetailsPage/> */}
       {/* <HomeScreen/> */}
-        
+      {/* <DishDetailsScreen/> */}
+      {/* <Basket/> */}
+      <OrderScreen/>
 
 
       <StatusBar style="auto" />
